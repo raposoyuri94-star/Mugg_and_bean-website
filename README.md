@@ -13,10 +13,9 @@ Os ficheiros editáveis estão em `mugg-and-bean/`:
 - `public/assets/`: fotografias, logótipo e tipos de letra locais.
 - `index.html`: idioma, título e metadados.
 
-`dist/` é gerado pelo Vite. Faça alterações em `src/`, `public/` ou no `index.html` da pasta do projecto.
+`build/` é gerado pelo Vite. Faça alterações em `src/`, `public/` ou no `index.html` da pasta do projecto.
 
 A localização é **Baía Mall, Av. da Marginal, Bairro Triunfo, Maputo, Moçambique**. O site inclui telefone e percursos no Google Maps. Consulte `mugg-and-bean/content-sources.md` para as fontes.
 
 Fotografias e sugestões de pratos vêm da biblioteca oficial da marca, incluindo uma imagem republicada do Instagram. Preços e disponibilidade devem ser confirmados na loja. A galeria liga ao perfil pedido e não é uma ligação em tempo real ao Instagram.
 
-[Ver website](https://mugg-and-bean-coffee-table.vastchair514.chatgpt.site)
