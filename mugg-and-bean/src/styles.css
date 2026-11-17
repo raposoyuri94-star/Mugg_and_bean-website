@@ -12,3 +12,90 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 .store-address{font-style:normal;color:#d6d6d6;font-size:12px;line-height:1.8;margin-top:12px}.store-phone{display:inline-block;font-size:12px;margin-top:9px;text-decoration:underline;text-underline-offset:4px}.store-phone:hover{color:var(--accent)}
 @media(max-width:380px){.menu-tabs{margin-inline:-16px;padding-inline:16px}}
+
+/* Responsive layout: preserve readable text and keep controls within reach. */
+.hero,.story-layout,.visit-layout{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hero-copy,.hero-visual,.story-photos,.story-copy,.visit-copy,.finder{min-width:0}
+.hero-actions,.footer-top nav{flex-wrap:wrap}
+.dish-title,.finder h3,.dialog-dish h2{overflow-wrap:anywhere}
+@media(max-width:1024px){
+  .desktop-nav{display:none}
+  .nav-wrap{height:80px;gap:16px}
+  .header-cta{margin-left:auto;font-size:12px}
+  .mobile-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;width:44px;height:44px;background:none;padding:10px;flex:none}
+  .mobile-toggle span{display:block;width:23px;height:2px;background:var(--black)}
+  .mobile-nav:not([hidden]){display:flex;flex-direction:column;padding:12px 24px 20px;border-top:1px solid var(--border);max-height:calc(100dvh - 80px);overflow-y:auto}
+  .mobile-nav a{padding:12px 0;font-size:16px}
+  .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-top{flex-wrap:wrap}
+  .footer-top nav{gap:20px}
+}
+@media(max-width:900px){
+  .hero,.story-layout,.visit-layout{grid-template-columns:minmax(0,1fr)}
+  .hero{gap:40px;padding-block:40px 60px}
+  .hero h1{font-size:clamp(48px,9vw,78px);letter-spacing:-2px}
+  .hero-description{max-width:540px;font-size:16px}
+  .hero-visual{width:min(100%,520px);height:clamp(360px,75vw,540px);justify-self:center;padding-left:45px;padding-right:20px}
+  .hero-photo-card{width:45%;left:5px}
+  .hero-photo-card img{height:auto;aspect-ratio:4/3}
+  .hero-photo-card span{font-size:10px;min-height:40px;height:auto;padding:8px 3px}
+  .since-stamp{right:5px}
+  .hero-spark{right:0}
+  .story-main{height:auto;aspect-ratio:4/3}
+  .story-caption{right:8px;max-width:90%;font-size:12px}
+  .story-copy>p:not(.small-note){font-size:16px;max-width:65ch}
+  .moments-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .moments-heading{flex-wrap:wrap}
+  .visit-copy h2{font-size:clamp(32px,6vw,48px);padding-right:35px}
+  .visit-copy>p:last-child{font-size:16px}
+  .visit-cup{width:44px;height:44px;right:0;bottom:0}
+}
+@media(max-width:680px){
+  .container{width:calc(100% - 40px)}
+  .announcement{height:auto;min-height:34px;padding:8px 16px;text-align:center;font-size:11px;line-height:1.5}
+  .hero-description{font-size:16px}
+  .hero-intro,.small-note,.hero-note{font-size:12px}
+  .hero-actions{gap:20px}
+  .hero-actions .button,.hero-actions .text-link,.story-copy .button{font-size:14px;min-height:44px}
+  .hospitality-inner span{font-size:12px;align-items:flex-start}
+  .section-intro>p:last-child{font-size:15px;max-width:100%}
+  .menu-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;margin:26px 0;padding:0}
+  .menu-tabs button{font-size:13px;min-height:44px;padding:10px 8px;white-space:normal}
+  .dish-title{font-size:23px}
+  .dish-text p{font-size:14px;max-width:100%}
+  .dish-price{font-size:13px}
+  .dish-tag{font-size:10px;max-width:calc(100% - 20px)}
+  .menu-footer{flex-wrap:wrap}
+  .menu-footer>span{font-size:12px;max-width:100%}
+  .menu-footer .text-link,.instagram-link{font-size:14px;min-height:44px}
+  .moment span{font-size:12px;flex-wrap:wrap}
+  .gallery-note{font-size:13px}
+  .finder{padding:22px}
+  .finder h3{font-size:27px}
+  .store-address,.store-phone,.finder label,.all-stores,.finder-locations a{font-size:14px}
+  .location-input input{font-size:16px;height:44px}
+  .location-input button{width:44px;height:44px}
+  .finder-locations span,.visit-copy .small-note{font-size:12px}
+  .footer-top nav{font-size:13px;justify-content:flex-start;gap:16px 22px}
+  .footer-bottom{display:flex;flex-wrap:wrap;font-size:11px}
+  .dialog-dish p{font-size:15px}
+  .dialog-dish .detail-note{font-size:12px}
+  .dialog-dish .button{font-size:13px}
+}
+@media(max-width:480px){
+  .header-cta{display:none}
+  .mobile-toggle{margin-left:auto}
+  .hero h1{font-size:clamp(44px,12vw,58px)}
+  .menu-grid{grid-template-columns:minmax(0,1fr);gap:30px}
+  .dish-image-button img{height:auto;aspect-ratio:4/3}
+  .moments-grid{gap:12px}
+  .moment img{height:auto;aspect-ratio:3/4}
+  .moment span{font-size:11px;line-height:1.5;padding:35px 8px 10px}
+  .story-copy h2,.moments-heading h2{font-size:clamp(30px,8vw,38px)}
+  .hero-photo-card{width:53%}
+  .hero-note svg{flex:none}
+  .since-stamp{width:88px;height:88px}
+  .hero-visual{padding-left:30px;padding-right:10px}
+  .story-caption{padding:12px;gap:8px;font-size:11px}
+  .dialog-dish-copy{padding:24px 20px}
+}

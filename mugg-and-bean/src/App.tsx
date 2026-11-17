@@ -27,7 +27,7 @@ function Header() {
   const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const media = window.matchMedia('(min-width: 681px)');
+    const media = window.matchMedia('(min-width: 1025px)');
     const handleResize = () => { if (media.matches) setMobileOpen(false); };
     const handleEscape = (event: globalThis.KeyboardEvent) => {
       if (event.key === 'Escape' && mobileOpen) {
