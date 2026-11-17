@@ -1,0 +1,111 @@
+[
+  {
+    "name": "americano.jpg",
+    "bytes": 18851,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/s7992nzrdc8b8lx7e14u8bvi-most-ordered-americano.full.jpg"
+  },
+  {
+    "name": "breakfast.jpg",
+    "bytes": 24130,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/jfm7wt90op8g4b52ike9guoq-on-the-go-breakfast.full.jpg"
+  },
+  {
+    "name": "brunch-table.jpg",
+    "bytes": 131139,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/zops81hqiv9eb62vwo342vk0-restaurant-menu-view.full.jpg"
+  },
+  {
+    "name": "cake.webp",
+    "bytes": 24134,
+    "url": "https://d1fbczgvp9hkii.cloudfront.net/assets/images/img-pages/blog/raise-your-cup/side-food-items.webp"
+  },
+  {
+    "name": "cappuccino.jpg",
+    "bytes": 17643,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/xqyila2bq4uj4ysw06p7evmp-most-ordered-capp.full.jpg"
+  },
+  {
+    "name": "chicken-stack.jpg",
+    "bytes": 24348,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/gobotsw6dwzgybd4oyjlrlte-most-ordered-alabama-chicken-stack.full.jpg"
+  },
+  {
+    "name": "fraunces-1.ttf",
+    "bytes": 71596,
+    "url": "https://fonts.google.com/specimen/Fraunces"
+  },
+  {
+    "name": "friends.webp",
+    "bytes": 181292,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/hdvda1nx0qw8q23bpuf73i82-dee571361944a4eca5aa7ed6ae800c63959bd3ef.full.png",
+    "processing": "Resized and encoded as WebP."
+  },
+  {
+    "name": "grill-breakfast.jpg",
+    "bytes": 26509,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/t4lq3zelcxd1jarc6sm49yws-tcm.full.jpg"
+  },
+  {
+    "name": "hero-table.webp",
+    "bytes": 141908,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/vuo8ifbodg1paju1qemy7uli-df6890c19b5e3f0d12ab76edc85edab13930d289.full.png",
+    "processing": "Resized and encoded as WebP."
+  },
+  {
+    "name": "hot-chocolate.jpg",
+    "bytes": 17601,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/ek8xvni8ec646yiuhnp5y1j7-most-ordered-hot-chocolate.full.jpg"
+  },
+  {
+    "name": "instagram-muffin.webp",
+    "bytes": 39180,
+    "url": "https://d1fbczgvp9hkii.cloudfront.net/assets/images/img-pages/about-us/freshly-baked-muffins/instagram-pic-2.webp"
+  },
+  {
+    "name": "latte.jpg",
+    "bytes": 18807,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/wf7sirxryll6xz25s3uzpk4h-artboard-8.full.jpg"
+  },
+  {
+    "name": "logo.svg",
+    "bytes": 24860,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/apos-frontend/releases/06443197944470969/default/modules/mugg-and-bean/asset/mugg-and-bean-logo.svg"
+  },
+  {
+    "name": "manrope-0.ttf",
+    "bytes": 96200,
+    "url": "https://fonts.google.com/specimen/Manrope"
+  },
+  {
+    "name": "manrope-2.ttf",
+    "bytes": 96348,
+    "url": "https://fonts.google.com/specimen/Manrope"
+  },
+  {
+    "name": "manrope-3.ttf",
+    "bytes": 96188,
+    "url": "https://fonts.google.com/specimen/Manrope"
+  },
+  {
+    "name": "moment-coffee.webp",
+    "bytes": 36166,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/h40ppz3kbnmlyfidkby05eyc-375c7acc1527f80e26028b6b06f6ebc59cbd440f.full.jpg",
+    "processing": "Resized and encoded as WebP."
+  },
+  {
+    "name": "moment-takeaway.webp",
+    "bytes": 67222,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/zanw5i3diwmrbyoswrikzaqe-moment-2.full.jpg",
+    "processing": "Resized and encoded as WebP."
+  },
+  {
+    "name": "muffin.webp",
+    "bytes": 40468,
+    "url": "https://d1fbczgvp9hkii.cloudfront.net/assets/images/img-pages/about-us/freshly-baked-muffins/giant-muffin-1-blueberry.webp"
+  },
+  {
+    "name": "omelette.jpg",
+    "bytes": 24377,
+    "url": "https://apos-alt-muggandbean-prod.s3.af-south-1.amazonaws.com/attachments/ctzstif1hu3q6domjybaymuk-most-ordered-rancheros.full.jpg"
+  }
+]
