@@ -1,5 +1,5 @@
 export type DishCategory = 'breakfast' | 'coffee' | 'bakery' | 'lunch';
-export type MenuCategory = 'favourites' | Exclude<DishCategory, 'lunch'>;
+export type MenuCategory = 'favourites' | DishCategory;
 
 export interface Dish {
   id: string;
@@ -40,6 +40,7 @@ export const menuCategories: ReadonlyArray<{ id: MenuCategory; label: string }> 
   { id: 'breakfast', label: 'Pequeno-almoço' },
   { id: 'coffee', label: 'Café e bebidas' },
   { id: 'bakery', label: 'Doces e bolos' },
+  { id: 'lunch', label: 'Almoço' },
 ];
 
 // Sugestões da marca. A disponibilidade e os preços locais são confirmados na loja.

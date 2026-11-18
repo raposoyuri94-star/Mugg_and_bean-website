@@ -94,7 +94,7 @@ function Hero() {
         <div className="hero-visual">
           <img className="hero-main-photo" src={`${assetBase}hero-table.webp`} alt="Uma chávena de cappuccino nas mãos de uma cliente à mesa do Mugg & Bean" width="556" height="650" fetchPriority="high" />
           <div className="since-stamp" aria-label="Um espírito generoso desde 1996"><span>Mais para si</span><Icon name="cup" /><span>Desde 1996</span></div>
-          <div className="hero-photo-card"><img src={`${assetBase}brunch-table.jpg`} alt="Uma refeição generosa do Mugg & Bean, pronta a saborear" width="320" height="240" /><span>Há coisas boas à sua espera.<Icon name="heart" /></span></div>
+          <div className="hero-photo-card"><img src={`${assetBase}brunch-table.jpg`} alt="Uma refeição generosa do Mugg & Bean, pronta a saborear" width="320" height="240" /><span>Há coisas boas à sua espera.<Icon name="arrow" /></span></div>
           <Icon name="star" className="hero-spark" />
         </div>
       </section>
@@ -218,11 +218,15 @@ function DetailsModal({ detail, onClose }: { detail: Detail | null; onClose: () 
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    if (detail && dialogRef.current && !dialogRef.current.open) {
-      dialogRef.current.showModal();
-      dialogRef.current.scrollTop = 0;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (detail) {
+      if (!dialog.open) dialog.showModal();
+      dialog.scrollTop = 0;
       document.body.classList.add('dialog-open');
       closeRef.current?.focus({ preventScroll: true });
+    } else if (dialog.open) {
+      dialog.close();
     }
     return () => document.body.classList.remove('dialog-open');
   }, [detail]);
