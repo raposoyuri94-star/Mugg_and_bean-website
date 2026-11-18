@@ -59,7 +59,7 @@ function Header() {
 
   return (
     <>
-      <div className="announcement"><Icon name="heart" /><span>Bom café. Refeições generosas. Mais momentos juntos.</span></div>
+      <div className="announcement"><Icon name="bean" /><span>Bom café. Refeições generosas. Mais momentos juntos.</span></div>
       <header className="site-header" onClick={event => {
         if (event.target instanceof Element && event.target.closest('a[href^="#"]')) setMobileOpen(false);
       }}>
@@ -101,7 +101,7 @@ function Hero() {
       <div className="hospitality-strip"><div className="container hospitality-inner">
         <span><Icon name="bean" />A nossa paixão pelo café</span>
         <span><Icon name="bake" />Do forno, com carinho</span>
-        <span><Icon name="heart" />Generosidade em cada prato</span>
+        <span><Icon name="bake" />Generosidade em cada prato</span>
         <span><Icon name="cup" />A sua casa fora de casa</span>
       </div></div>
     </>
