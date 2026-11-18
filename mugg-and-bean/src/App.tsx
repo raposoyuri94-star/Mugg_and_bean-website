@@ -6,6 +6,8 @@ import type { Dish, MenuCategory, Moment } from './content';
 
 type Detail = { type: 'dish'; dish: Dish } | { type: 'photo'; photo: Moment };
 
+const assetBase = `${import.meta.env.BASE_URL}assets/`;
+
 const navigation = [
   { id: 'home', label: 'Início' },
   { id: 'menu', label: 'A nossa ementa' },
@@ -16,7 +18,7 @@ const navigation = [
 function Brand({ footer = false }: { footer?: boolean }) {
   return (
     <a className="brand" href="#home" aria-label={footer ? 'Voltar ao início' : 'Mugg & Bean — início'}>
-      <img src="/assets/logo.svg" alt="Mugg & Bean" width="154" height="61" loading={footer ? 'lazy' : 'eager'} />
+      <img src={`${assetBase}logo.svg`} alt="Mugg & Bean" width="154" height="61" loading={footer ? 'lazy' : 'eager'} />
     </a>
   );
 }
@@ -90,9 +92,9 @@ function Hero() {
           <div className="hero-note"><svg aria-hidden="true" viewBox="0 0 57 34"><path d="M3 24c10 10 36 5 39-4 3-11-17-12-17-1 0 8 18 9 27-10m-9 1 9-3-1 9" /></svg><span>Um lugar familiar. Um pouco mais de carinho.</span></div>
         </div>
         <div className="hero-visual">
-          <img className="hero-main-photo" src="/assets/hero-table.webp" alt="Uma chávena de cappuccino nas mãos de uma cliente à mesa do Mugg & Bean" width="556" height="650" fetchPriority="high" />
+          <img className="hero-main-photo" src={`${assetBase}hero-table.webp`} alt="Uma chávena de cappuccino nas mãos de uma cliente à mesa do Mugg & Bean" width="556" height="650" fetchPriority="high" />
           <div className="since-stamp" aria-label="Um espírito generoso desde 1996"><span>Mais para si</span><Icon name="cup" /><span>Desde 1996</span></div>
-          <div className="hero-photo-card"><img src="/assets/brunch-table.jpg" alt="Uma refeição generosa do Mugg & Bean, pronta a saborear" width="320" height="240" /><span>Há coisas boas à sua espera.<Icon name="heart" /></span></div>
+          <div className="hero-photo-card"><img src={`${assetBase}brunch-table.jpg`} alt="Uma refeição generosa do Mugg & Bean, pronta a saborear" width="320" height="240" /><span>Há coisas boas à sua espera.<Icon name="heart" /></span></div>
           <Icon name="star" className="hero-spark" />
         </div>
       </section>
@@ -141,7 +143,7 @@ function Menu({ onSelect }: { onSelect: (dish: Dish) => void }) {
         {items.map(dish => <article className="menu-card" key={dish.id}>
           <button className="dish-image-button" data-dish={dish.id} aria-label={`Ver detalhes: ${dish.name}`} onClick={() => onSelect(dish)}>
             {dish.tag && <span className="dish-tag">{dish.tag}</span>}
-            <img src={`/assets/${dish.image}`} alt={dish.name} width="400" height="400" loading="lazy" />
+            <img src={`${assetBase}${dish.image}`} alt={dish.name} width="400" height="400" loading="lazy" />
             <span className="dish-open"><Icon name="arrow" /></span>
           </button>
           <div className="dish-text"><h3><button className="dish-title" data-dish={dish.id} onClick={() => onSelect(dish)}>{dish.name}</button></h3><p>{dish.summary}</p><span className="dish-price">{formatPrice(dish.priceMzn)}</span></div>
@@ -156,7 +158,7 @@ function Menu({ onSelect }: { onSelect: (dish: Dish) => void }) {
 function Story() {
   return (
     <section className="story-section" id="story" aria-labelledby="story-heading"><div className="container story-layout">
-      <div className="story-photos"><img className="story-main" src="/assets/friends.webp" alt="Duas amigas a partilhar uma refeição e uma boa conversa no Mugg & Bean" width="620" height="560" loading="lazy" /><div className="story-caption"><Icon name="heart" /><span>Onde um café rápido<br />se transforma numa boa conversa.</span></div></div>
+      <div className="story-photos"><img className="story-main" src={`${assetBase}friends.webp`} alt="Duas amigas a partilhar uma refeição e uma boa conversa no Mugg & Bean" width="620" height="560" loading="lazy" /><div className="story-caption"><Icon name="heart" /><span>Onde um café rápido<br />se transforma numa boa conversa.</span></div></div>
       <div className="story-copy"><p className="small-note">Mais do que uma cafetaria</p><h2 id="story-heading">Um lugar para<br />se sentir em casa.</h2><p>A nossa história começou na Cidade do Cabo, em 1996, com uma ideia simples: um bom café sabe ainda melhor com uma dose generosa de hospitalidade.</p><p>Hoje, esse espírito está em cada chávena, em cada refeição e em cada convite para ficar mais um pouco. No Baía Mall, em Maputo, há um lugar à sua espera.</p><a className="button button-outline" href="#visit">Venha conhecer-nos<Icon name="arrow" /></a></div>
     </div></section>
   );
@@ -167,7 +169,7 @@ function Moments({ onSelect }: { onSelect: (moment: Moment) => void }) {
     <section className="moments-section container section-space" id="moments" aria-labelledby="moments-heading">
       <div className="moments-heading"><div><p className="small-note">As coisas boas sabem melhor quando partilhadas</p><h2 id="moments-heading">A vida, um café de cada vez.</h2></div><a href={store.instagramUrl} className="text-link instagram-link" target="_blank" rel="noopener noreferrer"><Icon name="instagram" />@mugg_and_bean<Icon name="arrow" /></a></div>
       <div className="moments-grid">
-        {moments.map(moment => <button className="moment" key={moment.image} data-photo={`/assets/${moment.image}`} data-caption={moment.caption} aria-label={`Ver fotografia: ${moment.label}`} onClick={() => onSelect(moment)}><img src={`/assets/${moment.image}`} alt={moment.alt} width="500" height="550" loading="lazy" /><span><Icon name="instagram" />{moment.label}</span></button>)}
+        {moments.map(moment => <button className="moment" key={moment.image} data-photo={`${assetBase}${moment.image}`} data-caption={moment.caption} aria-label={`Ver fotografia: ${moment.label}`} onClick={() => onSelect(moment)}><img src={`${assetBase}${moment.image}`} alt={moment.alt} width="500" height="550" loading="lazy" /><span><Icon name="instagram" />{moment.label}</span></button>)}
       </div>
       <p className="gallery-note">Encontros, conversas e pequenas pausas para o café. Partilhe os seus momentos com <a href="https://www.instagram.com/explore/tags/mymuggtable/" target="_blank" rel="noopener noreferrer">#MyMuggTable</a>.</p>
     </section>
@@ -236,8 +238,8 @@ function DetailsModal({ detail, onClose }: { detail: Detail | null; onClose: () 
     <dialog ref={dialogRef} id="detail-dialog" className="detail-dialog" aria-labelledby="dialog-title" onClose={onClose} onClick={handleBackdrop}>
       <button ref={closeRef} className="dialog-close" aria-label="Fechar detalhes" onClick={() => dialogRef.current?.close()}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6" /></svg></button>
       <div id="dialog-content">
-        {detail?.type === 'dish' && <div className="dialog-dish"><img src={`/assets/${detail.dish.image}`} alt={detail.dish.name} width="400" height="500" /><div className="dialog-dish-copy"><h2 id="dialog-title">{detail.dish.name}</h2><p>{detail.dish.description}</p><p className="detail-price">{formatPrice(detail.dish.priceMzn)}</p><p className="detail-note">Confirme os preços, a disponibilidade e a informação sobre alergénios na loja do Baía Mall.</p><a className="button" href={store.phoneHref}>Consultar a loja<Icon name="arrow" /></a></div></div>}
-        {detail?.type === 'photo' && <div className="dialog-photo"><img src={`/assets/${detail.photo.image}`} alt={detail.photo.alt} /><div className="dialog-photo-copy"><h2 id="dialog-title">Pequenos momentos, muito para saborear.</h2><p>{detail.photo.caption}</p><a className="text-link" href={store.instagramUrl} target="_blank" rel="noopener noreferrer">Mais momentos no Instagram<Icon name="arrow" /></a></div></div>}
+        {detail?.type === 'dish' && <div className="dialog-dish"><img src={`${assetBase}${detail.dish.image}`} alt={detail.dish.name} width="400" height="500" /><div className="dialog-dish-copy"><h2 id="dialog-title">{detail.dish.name}</h2><p>{detail.dish.description}</p><p className="detail-price">{formatPrice(detail.dish.priceMzn)}</p><p className="detail-note">Confirme os preços, a disponibilidade e a informação sobre alergénios na loja do Baía Mall.</p><a className="button" href={store.phoneHref}>Consultar a loja<Icon name="arrow" /></a></div></div>}
+        {detail?.type === 'photo' && <div className="dialog-photo"><img src={`${assetBase}${detail.photo.image}`} alt={detail.photo.alt} /><div className="dialog-photo-copy"><h2 id="dialog-title">Pequenos momentos, muito para saborear.</h2><p>{detail.photo.caption}</p><a className="text-link" href={store.instagramUrl} target="_blank" rel="noopener noreferrer">Mais momentos no Instagram<Icon name="arrow" /></a></div></div>}
       </div>
     </dialog>
   );
